@@ -9,52 +9,75 @@ namespace GeekHomeworkMonth
         static void Main(string[] args)
         {
             Console.WriteLine("Введите порядковый номер текущего месяца");
-            int month = int.Parse(Console.ReadLine());
-
+            int.TryParse((Console.ReadLine()), out int month);
+            Console.WriteLine(MonthName(month));
+            IsOdd(month);
+            Console.ReadLine();
+        }
+        public static string MonthName(int month)
+        {
+            string monthName = "";
+            string error = "Error";
             switch (month)
             {
                 case 1:
-                    Console.WriteLine("Январь");
-                    break;
+                    monthName = "Январь";
+                    return monthName;
                 case 2:
-                    Console.WriteLine("Февраль");
-                    break;
+                    monthName ="Февраль";
+                    return monthName;
                 case 3:
-                    Console.WriteLine("Март");
-                    break;
+                    monthName = "Март";
+                    return monthName;
                 case 4:
-                    Console.WriteLine("Апрель");
-                    break;
+                    monthName = "Апрель";
+                    return monthName;
                 case 5:
-                    Console.WriteLine("Май");
-                    break;
+                    monthName = "Май";
+                    return monthName;
                 case 6:
-                    Console.WriteLine("Июнь");
-                    break;
+                    monthName = "Июнь";
+                    return monthName;
                 case 7:
-                    Console.WriteLine("Июль");
-                    break;
+                    monthName = "Июль";
+                    return monthName;
                 case 8:
-                    Console.WriteLine("Август");
-                    break;
+                    monthName = "Август";
+                    return monthName;
                 case 9:
-                    Console.WriteLine("Сентябрь");
-                    break;
+                    monthName = "Сентябрь";
+                    return monthName;
                 case 10:
-                    Console.WriteLine("Октябрь");
-                    break;
+                    monthName = "Октябрь";
+                    return monthName;
                 case 11:
-                    Console.WriteLine("Ноябрь");
-                    break;
+                    monthName = "Ноябрь";
+                    return monthName;
                 case 12:
-                    Console.WriteLine("Декабрь");
-                    break;
+                    monthName = "Декабрь";
+                    return monthName;
 
                 default:
-                    Console.WriteLine("Хорошая попытка, попробуй еще раз");
-                    break;
+                    monthName = "Хорошая попытка, попробуй еще раз";
+                    return error;
             }
-            Console.ReadLine();
+        }
+        public static void IsOdd(int monthNum)
+        {
+            string isOdd = "";
+            if (monthNum % 2 == 0)
+            {
+                isOdd = "Число четное";
+            }
+            else if (monthNum % 2 != 0)
+            {
+                isOdd = "Число нечетное";
+            }
+            else
+            {
+                isOdd = "Ошибка";
+            }
+            Console.WriteLine(isOdd);
         }
     }
 }

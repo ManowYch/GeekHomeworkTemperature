@@ -15,6 +15,7 @@ namespace GeekHomework
             float tempAv = (tempMax + tempMin) / 2;
             Console.WriteLine($"Среднесуточная температура составляет {tempAv}");
             Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
